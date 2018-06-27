@@ -26,15 +26,16 @@ public class FCMPlugin extends CordovaPlugin {
 	public static String tokenRefreshCallBack = "FCMPlugin.onTokenRefreshReceived";
 	public static Boolean notificationCallBackReady = false;
 	public static Map<String, Object> lastPush = null;
-	 
+
+
 	public FCMPlugin() {}
 	
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
 		gWebView = webView;
 		Log.d(TAG, "==> FCMPlugin initialize");
-		FirebaseMessaging.getInstance().subscribeToTopic("android");
-		FirebaseMessaging.getInstance().subscribeToTopic("all");
+//		FirebaseMessaging.getInstance().subscribeToTopic("android");
+//		FirebaseMessaging.getInstance().subscribeToTopic("all");
 	}
 	 
 	public boolean execute(final String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
